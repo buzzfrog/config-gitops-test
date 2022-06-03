@@ -1,0 +1,10 @@
+resources:
+- namespace.yaml
+
+namespace: gitea
+
+helmChartInflationGenerator:
+- chartName: gitea
+  chartHome: ../../../../../apps/gitea/v5
+  values: values.yaml
+  releaseNamespace: gitea
