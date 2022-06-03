@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: moonshot-output
+  labels:
+    app: moonshot-output
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moonshot-output
+  template:
+    metadata:
+      labels:
+        app: moonshot-output
+    spec:
+      containers:
+      - name: moonshot-output
+        image: busybox:latest
+        command:
+        - sleep
+        - "99999"
+        volumeMounts:
+          - mountPath: /app/Configuration
+            name: config
+      volumes:
+      - name: config
+        configMap:
+          name: output-configuration
+          items:
+          - key: "config.tags"
+            path: configuration.yml
