@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dummy-app-configuration-foo
+  annotations:
+    schema: foo-schema
+data:
+    foo: |
+      bar: 12
+      items:
+      - name: Alice
+        age: 20
+      - name: Bob
+        age: 41
+

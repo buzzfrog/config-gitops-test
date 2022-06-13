@@ -20,3 +20,10 @@ spec:
         command:
         - sleep
         - "99999"
+        volumeMounts:
+        - mountPath: /configuration
+          name: config
+      volumes:
+      - name: config
+        configMap:
+          name: dummy-app-configuration-foo

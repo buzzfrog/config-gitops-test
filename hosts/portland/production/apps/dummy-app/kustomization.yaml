@@ -1,5 +1,6 @@
 resources:
 - ./../../../../../apps/dummy-app/v1
 - namespace.yaml
+- configmap.yaml
 
 namespace: dummy-app
