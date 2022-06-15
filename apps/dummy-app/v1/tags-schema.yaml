@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tags-schema
+data:
+    tags-schema.json: |
+      {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://daytona/foo.json",
+        "title": "OPC UA Tags subscription list",
+        "description": "OPC UA Tags that should be subscribed to",
+        "type": "object",
+        "properties": {
+              "tags": {
+            "description": "Tags to subscribe to",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        }
+      }

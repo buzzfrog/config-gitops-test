@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configuration-tags
+  annotations:
+    schema: tags-schema
+data:
+    tags.config.json: |
+      {
+        "tags": [
+          "tag1",
+          "tag2"
+        ]
+      }

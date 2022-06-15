@@ -1,3 +1,4 @@
 resources:
 - dummy-deployment.yaml
-- foo-schema.yaml
+- tags-schema.yaml
+- configuration-tags-configmap.yaml
